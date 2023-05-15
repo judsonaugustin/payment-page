@@ -14,32 +14,40 @@ const FormData = (props) => {
     <div>
       {subscriptionData.map((data) => (
         <div key={data.id}>
-          <div className="flex items-center rounded-lg border-2 border-black p-2 mt-2">
-            <input
-              id={data.id}
-              disabled={data.disabled}
-              name="plan"
-              value="12_months_subscription"
-              type="radio"
-              className="h-4 w-4 border-2 border-red text-indigo-600 focus:ring-green"
-              checked={selectedPrice === data}
-              onChange={() => handlePlanSelect(data)}
-            />
-            <label
-              htmlFor={data.id}
-              className="ml-3 min-w-0 flex-1 text-black text-[14px] font-semibold"
+          <div>
+            <div
+              className={`flex items-center rounded-lg border-2 border-gray-400 p-2 mt-2 ${
+                selectedPrice === data ? "border-green-500 bg-green-100" : ""
+              } ${data.disabled ? "opacity-50" : ""}`}
             >
-              {data.plan}
-            </label>
-            <div className="text-right">
-              <p className="text-[12px]">
-                Total
-                <span className="text-[14px] font-semibold">₹{data.total}</span>
-              </p>
-              <p className="text-[12px]">
-                ₹{data.monthly}
-                <span className="text-[10px]"> /mo</span>
-              </p>
+              <input
+                id={data.id}
+                disabled={data.disabled}
+                name="plan"
+                value="12_months_subscription"
+                type="radio"
+                className="h-4 w-4"
+                checked={selectedPrice === data}
+                onChange={() => handlePlanSelect(data)}
+              />
+              <label
+                htmlFor={data.id}
+                className="ml-3 min-w-0 flex-1 text-black text-[14px] font-semibold"
+              >
+                {data.plan}
+              </label>
+              <div className="text-right">
+                <p className="text-[12px]">
+                  Total
+                  <span className="text-[14px] font-semibold">
+                    ₹{data.total}
+                  </span>
+                </p>
+                <p className="text-[12px]">
+                  ₹{data.monthly}
+                  <span className="text-[10px]"> /mo</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
