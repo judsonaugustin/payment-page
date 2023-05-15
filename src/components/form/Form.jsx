@@ -20,7 +20,7 @@ const Form = () => {
 
   return (
     <>
-      <div className="w-full mt-8 bg-white rounded-lg p-4">
+      <div className="w-full lg:mt-10 mt-[100px]  bg-white rounded-lg p-4">
         <div className="flex justify-around mb-2">
           <div className="text-center">
             <button className="py-1 px-3 text-white rounded-full bg-[#0096FF]">

@@ -5,9 +5,10 @@ const Features = () => {
   return (
     <>
       <div className="mt-20">
-        <h1 className="text-white font-semibold lg:text-[42px] sm:text-[36px] xs:text-[24px] text-[22px]  leading-snug">
+        <h1 className="relative text-white font-semibold lg:text-[42px] sm:text-[36px] xs:text-[24px] text-[22px]">
           Access curated courses worth <br />
-          <span className="">₹ 18,500</span> at just <span>₹ 99 </span>
+          <span className="absolute lg:bottom-7 sm:bottom-6 xs:bottom-[100px] lg:left-10 sm:left-7 xs:left-7 bg-red-500 lg:w-[135px] sm:w-[120px] xs:w-[120px] h-[5px]"></span>
+          ₹ 18,500 at just <span className="text-[#0096FF]">₹ 99 </span>
           per year!
         </h1>
       </div>

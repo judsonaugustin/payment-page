@@ -5,13 +5,15 @@
       "plan": "12 months subscription",
       "total": "99",
       "monthly": "8",
-      "disabled": "true"
+      "disabled": "true",
+      "badge": "Offer Expired"
     },
     {
       "id": 2,
       "plan": "12 months subscription",
       "total": "179",
-      "monthly": "15"
+      "monthly": "15",
+      "badge": "Recommended"
     },
     {
       "id": 3,
